@@ -31,5 +31,4 @@ public class BeerOrderDto extends BaseItem {
     private List<BeerOrderLineDto> beerOrderLines;
     private OrderStatusEnum orderStatus;
     private String orderStatusCallbackUrl;
-
 }

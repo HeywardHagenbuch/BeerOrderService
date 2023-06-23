@@ -22,12 +22,14 @@ public class TastingRoomService {
 
     private final CustomerRepository customerRepository;
     private final BeerOrderService beerOrderService;
+    private final BeerOrderRepository beerOrderRepository;
     private final List<String> beerUpcs = new ArrayList<>(3);
 
     public TastingRoomService(CustomerRepository customerRepository, BeerOrderService beerOrderService,
                               BeerOrderRepository beerOrderRepository) {
         this.customerRepository = customerRepository;
         this.beerOrderService = beerOrderService;
+        this.beerOrderRepository = beerOrderRepository;
 
         beerUpcs.add(BeerOrderBootStrap.BEER_1_UPC);
         beerUpcs.add(BeerOrderBootStrap.BEER_2_UPC);
@@ -69,6 +71,6 @@ public class TastingRoomService {
     }
 
     private String getRandomBeerUpc() {
-        return beerUpcs.get(new Random().nextInt(beerUpcs.size()));
+        return beerUpcs.get(new Random().nextInt(beerUpcs.size() -0));
     }
 }

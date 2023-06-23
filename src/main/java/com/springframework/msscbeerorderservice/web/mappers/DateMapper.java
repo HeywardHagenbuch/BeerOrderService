@@ -26,5 +26,4 @@ public class DateMapper {
             return null;
         }
     }
-
 }

@@ -12,6 +12,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = true)
 public class BeerOrderLineDto extends BaseItem {
+
     @Builder
     public BeerOrderLineDto(UUID id, Integer version, OffsetDateTime createdDate, OffsetDateTime lastModifiedDate,
                             String upc, String beerName, UUID beerId, Integer orderQuantity) {
